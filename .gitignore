@@ -1,0 +1,5 @@
+.env
+__pycache__/
+*.pyc
+tools/
+*_norwegian_voice/

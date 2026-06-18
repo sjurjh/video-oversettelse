@@ -1,0 +1,5 @@
+openai
+pydub
+audioop-lts; python_version >= "3.13"
+tqdm
+python-dotenv

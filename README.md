@@ -123,6 +123,16 @@ Programmet er laget for aa kunne gjenoppta arbeid:
 - Sluttlyd og muxet video gjenbrukes hvis de allerede finnes og `--force`/`--force-tts` ikke brukes.
 - Logg skrives til `process.log` i outputmappen.
 
+## Ikke med i GitHub-repoet
+
+Noen lokale filer og mapper ble bevisst ikke pushet til GitHub. Dette er styrt av `.gitignore`.
+
+- `.env` - lokal konfigurasjonsfil som peker programmet mot en ekstern OpenAI-nokkelfil. Den skal ikke inneholde selve API-nokkelen i repoet.
+- `tools/` - lokal FFmpeg-installasjon med kjorebare filer og tilhorende biblioteker. Den kan lastes ned igjen med `install_ffmpeg.bat`.
+- `__pycache__/` og `*.pyc` - automatisk genererte Python-cachefiler.
+- `*_norwegian_voice/` - genererte outputmapper per video. De kan inneholde ekstrahert originallyd, transkripsjoner, norsk oversettelse, en TTS-lydfil per segment, sluttlyd som WAV/MP3, muxet video med norsk lydspor og prosesslogg.
+- `.git/` - lokal Git-database med commit-historikk og remote-oppsett. Den er ikke en del av filene som pushes.
+
 ## Naa-vaerende teknisk status
 
 - Python-scriptet kompilerer syntaktisk.
